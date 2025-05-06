@@ -1,0 +1,435 @@
+/* 全局容器样式 */
+.home-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Fangzheng Shuti', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* 左侧边栏样式 */
+.sidebar {
+    flex: 0 0 240px !important;
+    background-color: #f5f7fa;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 2px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 卡片通用样式 */
+.card {
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    width: 270px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #fad0c4, #ff9a9e);
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.divider {
+    height: 2px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* 导航列表样式 */
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.nav-item:hover {
+    background: linear-gradient(145deg, #fad0c4, #ff9a9e);
+    transform: scale(1.05);
+}
+
+.nav-item a {
+    color: #333 !important;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: #ff7e5f !important;
+}
+
+/* 个人简介卡片样式 */
+.profile-card {
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    width: 270px;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(145deg, #fad0c4, #ff9a9e);
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-tabs {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-tabs span {
+    padding: 5px 15px;
+    cursor: pointer;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.profile-tabs span.active {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+/* 个人简介内容样式 */
+.profile-content {
+    padding: 10px 0;
+}
+
+.avatar-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 15px;
+    background-image: url('https: //www.keaitupian.cn/cjpic/frombd/1/253/4078873484/2044176489.jpg');
+    background-size: cover;
+}
+
+.name-bio h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.name-bio p {
+    margin: 5px 0 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* 功能内容样式 */
+.functions-content {
+    padding: 10px 0;
+}
+
+.external-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.external-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.external-links a:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.function-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.function-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.function-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.function-item h4 {
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+.function-item p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* 右侧内容区域样式 */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* 主题卡片样式 */
+.theme-card {
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    display: flex;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #fad0c4, #ff9a9e);
+}
+
+.theme-card img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.theme-card .content-wrapper {
+    padding: 15px;
+    flex: 1;
+}
+
+.theme-header {
+    padding: 15px;
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.theme-category {
+    color: #ff7e5f;
+    font-weight: 500;
+    margin-right: 10px;
+    padding: 5px 15px;
+    background: linear-gradient(145deg, #ff7e5f, #feb47b);
+    border-radius: 20px;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.theme-category:hover {
+    background: linear-gradient(145deg, #feb47b, #ff7e5f);
+}
+
+.theme-date {
+    color: #777;
+    margin-right: 10px;
+}
+
+.theme-title {
+    color: #333;
+    font-weight: 500;
+}
+
+.theme-content {
+    padding: 15px;
+    line-height: 1.6;
+}
+
+.theme-footer {
+    padding: 10px 15px;
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    border-top: 1px solid #eee;
+    color: white;
+}
+
+.theme-stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.stat-item {
+    display: inline-block;
+    padding: 5px 15px;
+    background: linear-gradient(145deg, #ff7e5f, #feb47b);
+    border-radius: 20px;
+    color: white;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.stat-item:hover {
+    background: linear-gradient(145deg, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+}
+
+.theme-update {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .home-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .theme-stats {
+        flex-wrap: wrap;
+    }
+
+    .theme-card {
+        flex-direction: column;
+    }
+
+    .theme-card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .theme-card .content-wrapper {
+        padding: 10px;
+    }
+
+    /* 响应式调整个人简介卡片 */
+    .profile-card {
+        width: auto;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        margin: 5px;
+    }
+
+    .profile-tabs {
+        flex-direction: column;
+    }
+
+    .external-links {
+        flex-wrap: wrap;
+    }
+}

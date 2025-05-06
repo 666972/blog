@@ -1,0 +1,83 @@
+/* 紧凑型页脚样式 - 文字覆盖在图片上 */
+.site-footer {
+    width: 100%;
+    position: relative;
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-top: 40px;
+    /* 与上方内容的间距 */
+}
+
+.footer-image-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    /* 缩小高度 */
+}
+
+.footer-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.footer-text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* 加深遮罩提高可读性 */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.poem-line {
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.footer-info {
+    max-width: 700px;
+    width: 100%;
+}
+
+.footer-info p {
+    margin: 6px 0;
+    font-size: 12px;
+}
+
+.footer-info a {
+    color: #a6c1ee;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .footer-image-container {
+        height: 180px;
+    }
+
+    .poem-line {
+        font-size: 14px;
+    }
+
+    .footer-info p {
+        font-size: 11px;
+    }
+}

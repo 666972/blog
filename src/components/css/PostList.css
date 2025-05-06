@@ -1,0 +1,289 @@
+/* 基础设置 */
+:root {
+    --accent-color: #6a11cb;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* 容器样式 */
+.post-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* 背景装饰元素 */
+.decorative-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.1;
+    animation: float 15s infinite ease-in-out;
+}
+
+.orb-1 {
+    width: 300px;
+    height: 300px;
+    background: var(--accent-color);
+    top: 20%;
+    left: -50px;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: #11998e;
+    bottom: 10%;
+    right: -100px;
+    animation-delay: 3s;
+}
+
+.orb-3 {
+    width: 250px;
+    height: 250px;
+    background: #f7b733;
+    top: 60%;
+    left: 30%;
+    animation-delay: 6s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-20px) translateX(20px);
+    }
+}
+
+/* 页面标题区域 */
+.page-header {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.breadcrumb-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.breadcrumb-link:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumb-link.active {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.breadcrumb-separator {
+    margin: 0 0.5rem;
+}
+
+/* 标题 */
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.title-underline {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* 文章网格布局 */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* 响应式设计：对于较小屏幕，保持 1 列或 2 列 */
+@media (max-width: 1024px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 每个文章卡片样式 */
+.post-card {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 图片区域 */
+.image-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 20px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* 内容区域 */
+.post-content {
+    padding: 1rem;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.post-date {
+    display: flex;
+    align-items: center;
+}
+
+.date-icon {
+    margin-right: 5px;
+}
+
+.read-time {
+    display: flex;
+    align-items: center;
+}
+
+.time-icon {
+    margin-right: 5px;
+}
+
+.post-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.post-excerpt {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* 标签区域 */
+.tags-container {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.tags-icon {
+    margin-right: 8px;
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    margin-right: 8px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* 喜欢按钮 */
+.likes-count {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.likes-count:hover .heart-icon {
+    color: var(--accent-color);
+}
+
+.heart-icon {
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
